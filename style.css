@@ -1,0 +1,247 @@
+/* Define the custom font and link the files */
+@font-face {
+    font-family: 'monserat';
+    src: url('fonts/static/Montserrat-Bold.ttf');      
+  }
+  @font-face {
+    font-family: 'linksfont';
+    src: url('fonts/alk-sanet.ttf');      
+  }
+  @font-face{
+    font-family: 'square';
+    src: url('fonts/bpg_extrasquare_2009.ttf');
+  }
+
+  
+nav{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: white;
+    border-bottom: solid 1px gray;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 80px;
+}
+.logo h3{
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 28px;
+    font-family: 'monsterat', sans-serif;
+    font-weight: bold;
+      /* Create a sharp 50/50 color split (change 90deg to 180deg for top/bottom split) */
+  background: linear-gradient(90deg, #002448 40%, #0f73d5 60%);
+  
+  /* Clip the background gradient so it only fills the text shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make the main text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: montserrat;
+}
+.nav-links a{
+    display: block;
+    padding: 16px 16px;
+    color: #01294d;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'linksfont';
+    /* border-radius: 50px; */
+    transition: all ease-in-out 0.3s;
+}
+.nav-links a:hover{
+    background-color: #006fc9;
+    color: white;
+    /* border-radius: 50px; */
+
+}
+.nav-links .nav-cta-button{
+    padding: 10px 10px;
+    margin-left: 16px;
+    border: #01294d solid 2px;
+    border-radius: 50px;
+}
+.nav-links .nav-cta-button:hover{
+    background-color: #006fc9;
+    border: #01294d solid 2px;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    width: 34px;
+}
+.hamburger .bar{
+    flex-basis: 100%;
+    height: 4px;
+    background-color: #111;
+    margin: 3px;
+}
+
+/* content container styling */
+  
+.hero-container {
+    /* 1. Add the background image with a dark overlay gradient for readability */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('randomImages/refinery.jpg');
+    
+    /* 2. Properly size and position the image */
+    background-size: cover;       /* Scales the image to completely fill the container */
+    background-position: center;   /* Centers the image perfectly */
+    background-repeat: no-repeat;  /* Prevents the image from repeating/tiling */
+    
+    /* 3. Give the container dimensions */
+    width: 100%;
+    min-height: 508px;             /* Adjust the height as needed */
+    
+    /* 4. Center the inner text vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+  }
+  
+  /* Style the text elements for contrast */
+  .hero-content {
+    color: #ffffff;                /* Ensure text color stands out */
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'linksfont';
+  }
+  .hero-content p{
+    font-family: 'square';
+  }
+    /*MEDIA CONTAINER*/
+    .media-container {
+        display: flex;
+        align-items: center; /* Vertically centers the text relative to the image */
+        gap: 20px;           /* Adds a clean space between the image and the text */
+        padding-top: 8px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+      
+      .media-image {
+        width: 400px;        /* Set your desired width for the image */
+        height: auto;        /* Keeps the image aspect ratio intact */
+        object-fit: cover;   /* Prevents the image from distorting if heights vary */
+        /* border-radius: 4px; */
+      }
+      
+      .media-text {
+        flex: 1;             /* Tells the text container to take up all remaining width */
+      }
+
+      /* animated icons */
+      .iconsContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 1;
+      }
+     
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .fade-item {
+        opacity: 0; /* Hide items initially */
+        animation: fadeIn 0.6s ease-in-out forwards;
+        /* Multiply index by a delay time (e.g., 0.4s) */
+        animation-delay: calc(var(--index) * 0.4s);
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .fade-item img{
+    width: 100px;
+      }
+ 
+      .fade-item p{
+        font-family: 'linksfont';
+        align-items: center;
+      }
+
+
+      /* responsiveness */
+@media (max-width: 768px){
+    nav{
+        flex-wrap: wrap;
+    }
+    .hamburger{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logo{
+        height: 80px;
+    }
+    .nav-links {
+        display: none;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li{
+        flex-basis: 100%;
+    }
+    .nav-links a{
+        text-align: center;
+        font-size: 28px;
+    }
+    .nav-links a:hover{
+        background-color: aquamarine;
+    }
+    .nav-links .nav-cta-button{
+        padding: 30px 16px;
+        margin-left: 0;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 30px;
+    }
+    .nav-links .nav-cta-button:hover{
+        background-color: aquamarine;
+    }
+    .media-container{
+        flex-direction: column;
+    }
+    .iconsContainer{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
