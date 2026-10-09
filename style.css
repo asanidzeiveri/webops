@@ -136,7 +136,7 @@ nav{
         display: flex;
         align-items: center; /* Vertically centers the text relative to the image */
         gap: 20px;           /* Adds a clean space between the image and the text */
-        padding-top: 8px;
+        /* padding-top: 8px; */
         background-color: #f9f9f9;
         border-radius: 8px;
       }
