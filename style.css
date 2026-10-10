@@ -143,9 +143,11 @@ nav{
       }
       
       .media-image {
-        width: 400px;        /* Set your desired width for the image */
+        width: 300px;        /* Set your desired width for the image */
         height: auto;        /* Keeps the image aspect ratio intact */
         object-fit: cover;   /* Prevents the image from distorting if heights vary */
+        padding-top: 8px;
+        padding-bottom: 8px;
         /* border-radius: 4px; */
       }
       
@@ -203,7 +205,7 @@ nav{
       }
 
 
-      /* responsiveness */
+      /* responsiveness ---------------------[]*/
 @media (max-width: 768px){
     nav{
         flex-wrap: wrap;
@@ -254,6 +256,7 @@ nav{
     }
     .fade-item p{
       font-size: 14px;
+      width:200px;
     }
 
     .hero-container {
@@ -266,7 +269,7 @@ nav{
       
       /* 3. Give the container dimensions */
       width: 100%;
-      min-height: 300px;             /* Adjust the height as needed */
+      min-height: 280px;             /* Adjust the height as needed */
       
       /* 4. Center the inner text vertically and horizontally */
       display: flex;
