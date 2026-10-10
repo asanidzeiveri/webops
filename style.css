@@ -124,12 +124,13 @@ nav{
   }
   
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 32px;
     margin-bottom: 10px;
     font-family: 'linksfont';
   }
   .hero-content p{
     font-family: 'square';
+    font-size: 16px;
   }
     /*MEDIA CONTAINER*/
     .media-container {
@@ -192,6 +193,7 @@ nav{
       .fade-item p{
         font-family: 'linksfont';
         align-items: center;
+        font-size: 16px;
       }
 
 
@@ -244,12 +246,13 @@ nav{
         align-items: center;
         flex-wrap: wrap;
     }
+    .fade-item p{
+      font-size: 14px;
+    }
 
     .hero-container {
       /* IMAGE */
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('randomImages/refinery.jpg');
-      
+     
       /* 2. Properly size and position the image */
       background-size: cover;       /* Scales the image to completely fill the container */
       background-position: center;   /* Centers the image perfectly */
@@ -257,13 +260,30 @@ nav{
       
       /* 3. Give the container dimensions */
       width: 100%;
-      min-height: 200px;             /* Adjust the height as needed */
+      min-height: 300px;             /* Adjust the height as needed */
       
       /* 4. Center the inner text vertically and horizontally */
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      /* background-attachment: fixed; */
+      background-attachment: scroll;
     }
+      
+  /* Style the text elements for contrast */
+  .hero-content {
+    color: #ffffff;                /* Ensure text color stands out */
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .hero-content h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-family: 'linksfont';
+  }
+  .hero-content p{
+   
+    font-size: 12px;
+  }
 }
