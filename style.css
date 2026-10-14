@@ -290,6 +290,98 @@ nav{
         color: black;
         box-shadow: 0px 0px 15px #00c49d;
     }
+
+    /* FOOTER {}{}{}{}{}{}{}{}{}{{}}{}{}{}{}{}*/
+    .footer{
+      background-color: black;
+      color: #f9f9f9;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      flex-direction: row;
+      
+    }
+    .footerdiv h1{
+      font-size: 20px;
+      color: orange;
+      padding-bottom: 10px;
+    }
+    .footerdiv{
+      font-size: 14px;
+      font-family: 'square';
+      padding: 20px;
+      
+    }
+    .footercontainer{
+      display: flex;
+      align-items: center;
+    }
+    /* FOOTERICONS */
+
+    /* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  /* font-size: 30px; */
+  /* width: 30px; */
+  text-align: center;
+  text-decoration: none;
+  /* border-radius: 50%; */
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  color: orange;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  /* background: #3B5998; */
+  color: white;
+}
+.fa-linkedin{
+  color: white;
+}
+.fa-instagram{
+  color: white;
+}
+.fa-phone{
+color: white;
+}
+/* LOCATION PIN STYLE */
+.pin-container {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 20px;
+  padding: 10px;
+}
+
+.location-pin {
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 50% 0;
+  background: #ffffff; /* Pin Color */
+  transform: rotate(-45deg);
+  position: relative;
+}
+
+/* The hole in the middle of the pin */
+.location-pin::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #000000; /* Matches your background color */
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+
+/*END OF FOOTER STYLE FOOTER {}{}{}{}{}{}{}{}{}{{}}{}{}{}{}{}*/
+
       /* responsiveness ------------------------------------------------------------------------------------------
       ----------------------------------------------------------------------------------------------------------[]*/
 @media (max-width: 768px){
@@ -416,5 +508,15 @@ nav{
     width: 160px;
     margin: 25px auto 10px;
     padding: 12px;
+}
+.footer{
+  flex-direction: column;
+  /* text-align: center; */
+}
+.footer h1{
+  font-size: 16px;
+}
+.footerdiv{
+  font-size: 12px;
 }
 }

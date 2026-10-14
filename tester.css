@@ -56,6 +56,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     height: 64px;
+    z-index: 1;
 
   }
  
@@ -76,8 +77,19 @@
     /* Multiply index by a delay time (e.g., 0.2s) */
     animation-delay: calc(var(--index) * 0.3s);
     padding: 10px;
+    
   }
   .fade-item img{
 width: 80px;
   }
   
+  /* FOOTER PART OF THE SITE */
+  .footer{
+    background-color: black;
+    color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+  }
