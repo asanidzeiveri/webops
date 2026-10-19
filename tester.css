@@ -1,7 +1,7 @@
 .hero-container {
     /* 1. Add the background image with a dark overlay gradient for readability */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url('randomImages/forest.jpg');
+                      url('randomImages/industrialbackground.jpg');
     
     /* 2. Properly size and position the image */
     background-size: cover;       /* Scales the image to completely fill the container */

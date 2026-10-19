@@ -1,0 +1,528 @@
+/* Define the custom font and link the files */
+@font-face {
+    font-family: 'monserat';
+    src: url('fonts/static/Montserrat-Bold.ttf');      
+  }
+  @font-face {
+    font-family: 'linksfont';
+    src: url('fonts/alk-sanet.ttf');      
+  }
+  @font-face{
+    font-family: 'square';
+    src: url('fonts/bpg_extrasquare_2009.ttf');
+  }
+
+  /* NAVIGATION BAR STYLING */
+nav{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(0, 0, 0);
+    border-bottom: solid 1px rgb(0, 0, 0);
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 80px;
+}
+.logo h3{
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 28px;
+    font-family: 'monsterat', sans-serif;
+    font-weight: bold;
+      /* Create a sharp 50/50 color split (change 90deg to 180deg for top/bottom split) */
+  background: linear-gradient(90deg, #0056ac 40%, #55aaff 60%);
+  
+  /* Clip the background gradient so it only fills the text shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make the main text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: montserrat;
+}
+.nav-links a{
+    display: block;
+    padding: 16px 16px;
+    color: #1692ff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'linksfont';
+    /* border-radius: 50px; */
+    transition: all ease-in-out 0.3s;
+}
+.nav-links a:hover{
+    background-color: #006fc9;
+    color: white;
+    /* border-radius: 50px; */
+
+}
+.nav-links .nav-cta-button{
+    padding: 10px 10px;
+    margin-left: 16px;
+    border: #1692ff solid 2px;
+    border-radius: 50px;
+}
+.nav-links .nav-cta-button:hover{
+    background-color: #006fc9;
+    border: #01294d solid 2px;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    width: 34px;
+}
+.hamburger .bar{
+    flex-basis: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 3px;
+}
+
+/* content container styling */
+  
+.hero-container {
+    /* 1. Add the background image with a dark overlay gradient for readability */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('images/coverphoto1.png');
+    
+    /* 2. Properly size and position the image */
+    background-size: cover;       /* Scales the image to completely fill the container */
+    background-position: center;   /* Centers the image perfectly */
+    background-repeat: no-repeat;  /* Prevents the image from repeating/tiling */
+    
+    /* 3. Give the container dimensions */
+    width: 100%;
+    min-height: 452px;             /* Adjust the height as needed */
+    
+    /* 4. Center the inner text vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+  }
+  
+  /* Style the text elements for contrast */
+  .hero-content {
+    color: #ffffff;                /* Ensure text color stands out */
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-family: 'linksfont';
+    font-weight: bold;
+  }
+  .hero-content p{
+    font-family: 'square';
+    font-size: 16px;
+  }
+/* SERVICESSTATEMENT STYLE */
+.servicesstatement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'linksfont';
+  text-align: center;
+  height: 30px;
+  background-color: black;
+  color: white;
+}
+
+.readmoreButton{
+  padding: 8px 8px;
+  margin: 8px;
+  color: #01294d;
+  background-color: orange;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'linksfont';
+  font-size: 14px;
+  display: block;
+}
+.readmoreButton:hover{
+  background-color: #006fc9;
+  color: white;
+}
+
+    /*MEDIA CONTAINER*/
+    .media-container {
+        display: flex;
+        align-items: center; /* Vertically centers the text relative to the image */
+        gap: 20px;           /* Adds a clean space between the image and the text */
+        padding-top: 8px;
+        background-color: #000000;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 8, 0.3);
+      }
+      
+      .media-image {
+        width: 300px;        /* Set your desired width for the image */
+        height: auto;        /* Keeps the image aspect ratio intact */
+        object-fit: cover;   /* Prevents the image from distorting if heights vary */
+        margin: 4px;
+        border-radius: 20% 0 20% 0;
+      }
+      
+      .media-text {
+        flex: 1;  
+        font-family: 'square';           /* Tells the text container to take up all remaining width */
+        margin: 8px;
+      }
+      .media-text h2{
+        font-weight: bold;
+        padding-bottom: 8px;
+        font-family: 'square';
+      }
+
+      /* animated icons */
+      .iconsContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 1;
+        background-color: #000000;
+      }
+     
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .fade-item {
+        opacity: 0; /* Hide items initially */
+        animation: fadeIn 0.6s ease-in-out forwards;
+        /* Multiply index by a delay time (e.g., 0.4s) */
+        animation-delay: calc(var(--index) * 0.4s);
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    
+      }
+      .fade-item img{
+      width: 100px;
+      }
+ 
+      .fade-item h3{
+        font-family: 'linksfont';
+        align-items: center;
+        font-size: 16px;
+        color: white;
+      }
+      .fade-item p{
+        font-family: 'square';
+        align-items: center;
+        font-size: 12px;
+        color: white;
+      }
+
+      #info {
+        display: flex;
+        width: 100%;
+        min-height: 500px;
+        height: auto;
+        background:
+            linear-gradient(
+                90deg,
+                rgb(0, 0, 0) 0%,
+                rgba(131, 131, 131, 0.9) 50%,
+                rgba(0, 0, 0, 0.4) 100%
+            ),
+            url(randomImages/industrialbackground.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: auto;
+        box-shadow: 0px 0px 10px;
+    }
+    
+    #info .textitemleft p{
+        font-family: 'square';
+        padding: 20px;
+        color: rgb(255, 255, 255);
+        flex-basis: 70%;
+        font-size: 16px;
+    }
+    
+    #info .textitemleft h1{
+        font-family: 'linksfont';
+        padding: 20px;
+        color: white;
+        font-size: 20px;
+
+    }
+    
+    #info .button {
+        color: white;
+        text-align: center;
+        padding: 16px 14px;
+        margin-left: 20px;
+        text-decoration: none;
+        display: inline-block;
+        border: 2px solid white;
+        border-radius: 10px;
+        transition: all 1s;
+        font-family: 'square';
+    }
+    
+    #info .button:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 0px 15px #00c49d;
+    }
+
+    /* FOOTER {}{}{}{}{}{}{}{}{}{{}}{}{}{}{}{}*/
+    .footer{
+      background-color: black;
+      color: #f9f9f9;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      flex-direction: row;
+      
+    }
+    .footerdiv h1{
+      font-size: 20px;
+      color: orange;
+      padding-bottom: 10px;
+    }
+    .footerdiv{
+      font-size: 14px;
+      font-family: 'square';
+      padding: 20px;
+      
+    }
+    .footercontainer{
+      display: flex;
+      align-items: center;
+    }
+    /* FOOTERICONS */
+
+    /* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  /* font-size: 30px; */
+  /* width: 30px; */
+  text-align: center;
+  text-decoration: none;
+  /* border-radius: 50%; */
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  color: orange;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  /* background: #3B5998; */
+  color: white;
+}
+.fa-linkedin{
+  color: white;
+}
+.fa-instagram{
+  color: white;
+}
+.fa-phone{
+color: white;
+}
+/* LOCATION PIN STYLE */
+.pin-container {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 20px;
+  padding: 10px;
+}
+
+.location-pin {
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 50% 0;
+  background: #ffffff; /* Pin Color */
+  transform: rotate(-45deg);
+  position: relative;
+}
+
+/* The hole in the middle of the pin */
+.location-pin::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #000000; /* Matches your background color */
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+
+/*END OF FOOTER STYLE FOOTER {}{}{}{}{}{}{}{}{}{{}}{}{}{}{}{}*/
+
+      /* responsiveness ------------------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------------------------------------[]*/
+@media (max-width: 768px){
+    nav{
+        flex-wrap: wrap;
+    }
+    .hamburger{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logo{
+        height: 60px;
+    }
+    .nav-links {
+        display: none;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li{
+        flex-basis: 100%;
+    }
+    .nav-links a{
+        text-align: center;
+        font-size: 24px;
+    }
+    .nav-links a:hover{
+        background-color: #006fc9;
+    }
+    .nav-links .nav-cta-button{
+        padding: 20px 16px;
+        margin-left: 0;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 30px;
+    }
+    .nav-links .nav-cta-button:hover{
+        background-color: #006fc9;
+    }
+    .media-container{
+        flex-direction: column;
+    }
+    .iconsContainer{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .fade-item h3{
+      font-size: 14px;
+      width:auto;
+    }
+    .fade-item p{
+      font-size: 12px;
+      
+    }
+    .fade-item img{
+      width: 80px;
+      }
+/* TOP BAR */
+    .hero-container {
+      /* IMAGE */
+     
+      /* 2. Properly size and position the image */
+      background-size: cover;       /* Scales the image to completely fill the container */
+      background-position: center;   /* Centers the image perfectly */
+      background-repeat: no-repeat;  /* Prevents the image from repeating/tiling */
+      
+      /* 3. Give the container dimensions */
+      width: 100%;
+      min-height: 200px;             /* Adjust the height as needed */
+      
+      /* 4. Center the inner text vertically and horizontally */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-attachment: scroll;
+    }
+      
+  /* Style the text elements for contrast */
+  .hero-content {
+    color: #ffffff;                /* Ensure text color stands out */
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .hero-content h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'linksfont';
+  }
+  .hero-content p{
+   
+    font-size: 10px;
+  }
+  .media-image {
+    width: 200px; 
+  }
+  #info {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    flex-direction: column;
+    background-position: center;
+}
+/* BOTTOMCONTENT FLEXIBILITY */
+#info div.textitemleft {
+    /* width: 100%; */
+    /* flex-basis: 100%; */
+    padding: 20px 20px;
+    font-size: 14px; 
+    line-height: 1.6;
+}
+
+#info div h1 {
+    font-size: 18px;
+}
+
+#info .button {
+    display: block;
+    width: 160px;
+    margin: 25px auto 10px;
+    padding: 12px;
+}
+.footer{
+  flex-direction: column;
+  /* text-align: center; */
+}
+.footer h1{
+  font-size: 16px;
+}
+.footerdiv{
+  font-size: 12px;
+}
+}
