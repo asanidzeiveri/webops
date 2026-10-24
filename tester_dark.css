@@ -94,3 +94,15 @@ width: 80px;
     flex-direction: row;
     
   }
+  
+  /* LIGHT-DARK Button Styling */
+  .lightdark{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px;
+   }
+   .lightdark:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+   }

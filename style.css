@@ -92,6 +92,19 @@ nav{
     margin: 3px;
 }
 
+  /* LIGHT-DARK Button Styling */
+  .nav-links .lightdark{
+    background: white;
+    color: black;
+    border: none;
+    padding: 8px;
+align-items: center;
+   }
+   .nav-links .lightdark:hover{
+    background-color: black;
+    color: white;
+   }
+
 /* content container styling */
   
 .hero-container {
