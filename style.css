@@ -184,11 +184,12 @@ align-items: center;
       }
       
       .media-image {
-        width: 300px;        /* Set your desired width for the image */
+        width: 280px;        /* Set your desired width for the image */
         height: auto;        /* Keeps the image aspect ratio intact */
         object-fit: cover;   /* Prevents the image from distorting if heights vary */
-        margin: 4px;
+       
         border-radius: 20% 0 20% 0;
+        margin: 20px;
       }
       
       .media-text {
@@ -303,7 +304,18 @@ align-items: center;
         color: black;
         box-shadow: 0px 0px 15px #00c49d;
     }
-
+    /* LARGE LOGO OOOOOOOOOOOOOOO */
+    .largelogospace{
+      display: flex;
+      justify-content: center;
+      background-image: url('images/logolarge.png');
+      background-position: center;
+      background-size: 200px;
+      height: 200px;
+      background-repeat: no-repeat;
+      
+    }
+   
     /* FOOTER {}{}{}{}{}{}{}{}{}{{}}{}{}{}{}{}*/
     .footer{
       background-color: black;
