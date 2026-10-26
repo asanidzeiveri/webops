@@ -254,7 +254,7 @@ align-items: center;
       #info {
         display: flex;
         width: 100%;
-        min-height: 500px;
+        min-height: 600px;
         height: auto;
         background:
             linear-gradient(
@@ -303,6 +303,14 @@ align-items: center;
         background-color: white;
         color: black;
         box-shadow: 0px 0px 15px #00c49d;
+    }
+     /* unordered list styling */
+     #info .textitemleft ul {
+      font-family: 'square';
+      color: white;
+      list-style-type: square;
+      padding-left: 40px;
+      padding-bottom: 20px;
     }
     /* LARGE LOGO OOOOOOOOOOOOOOO */
     .largelogospace{
