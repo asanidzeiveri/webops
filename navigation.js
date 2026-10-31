@@ -1,23 +1,32 @@
+
+// ==========================================
+// RESPONSIVE NAVIGATION / HAMBURGER MENU
+// ==========================================
+
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
 
-// //Light-Dark Toggle
-// const themeStylesheet = document.getElementById("themeStylesheet");
-// const themeToggle = document.getElementById("themeToggle");
-// themeToggle.addEventListener("click", function () {
-//   if (themeStylesheet.getAttribute("href") === "style.css") {
-//       themeStylesheet.setAttribute("href", "style_dark.css");
-//       themeToggle.textContent = "☼ Light mode";
-//   } else {
-//       themeStylesheet.setAttribute("href", "style.css");
-//       themeToggle.textContent = "☽ Dark mode";
-//   }
-// });
+if (hamburger && navLinks) {
 
-// Light-Dark Toggle
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+} else {
+    if (!hamburger) {
+        console.warn("Hamburger menu element (.hamburger) not found on this page.");
+    }
+
+    if (!navLinks) {
+        console.warn("Navigation links element (.nav-links) not found on this page.");
+    }
+}
+
+
+// ==========================================
+// LIGHT-DARK THEME TOGGLE
+// ==========================================
+
 const themeStylesheet = document.getElementById("themeStylesheet");
 const themeToggle = document.getElementById("themeToggle");
 
@@ -25,37 +34,89 @@ const themeToggle = document.getElementById("themeToggle");
 const logo = document.querySelector(".logo img");
 
 const serviceIcons = document.querySelectorAll(
-  ".iconsContainer .fade-item img"
+    ".iconsContainer .fade-item img"
 );
 
-themeToggle.addEventListener("click", function () {
 
-  if (themeStylesheet.getAttribute("href") === "style.css") {
+// Check theme toggle elements
+if (themeToggle && themeStylesheet) {
 
-    // Switch to dark theme
-    themeStylesheet.setAttribute("href", "style_dark.css");
-    themeToggle.textContent = "☼ Light mode";
+    themeToggle.addEventListener("click", function () {
 
-    // Change logo to white version
-    logo.src = "images/ddLogo_White.png";
+        if (themeStylesheet.getAttribute("href") === "style.css") {
 
-    // Change service icons to white versions
-    serviceIcons[0].src = "images/icons/evac_White.png";
-    serviceIcons[1].src = "images/icons/pid_White.png";
-    serviceIcons[2].src = "images/icons/trainings_White.png";
+            // Switch to dark theme
+            themeStylesheet.setAttribute("href", "style_dark.css");
+            themeToggle.textContent = "☼ Light mode";
 
-  } else {
+            // Change logo to white version
+            if (logo) {
+                logo.src = "images/ddLogo_White.png";
+            }
 
-    // Switch to light theme
-    themeStylesheet.setAttribute("href", "style.css");
-    themeToggle.textContent = "☽ Dark mode";
+            // Change service icons to white versions
+            if (serviceIcons.length > 0) {
+                if (serviceIcons[0]) {
+                    serviceIcons[0].src = "images/icons/evac_White.png";
+                }
+                if (serviceIcons[1]) {
+                    serviceIcons[1].src = "images/icons/pid_White.png";
+                }
+                if (serviceIcons[2]) {
+                    serviceIcons[2].src = "images/icons/trainings_White.png";
+                }
+            }
 
-    // Restore original logo
-    logo.src = "images/ddLogo.png";
+        } else {
 
-    // Restore original service icons
-    serviceIcons[0].src = "images/icons/evac.png";
-    serviceIcons[1].src = "images/icons/pid.png";
-    serviceIcons[2].src = "images/icons/trainings.png";
-  }
-});
+            // Switch to light theme
+            themeStylesheet.setAttribute("href", "style.css");
+            themeToggle.textContent = "☽ Dark mode";
+
+            // Restore original logo
+            if (logo) {
+                logo.src = "images/ddLogo.png";
+            }
+
+            // Restore original service icons
+            if (serviceIcons.length > 0) {
+                if (serviceIcons[0]) {
+                    serviceIcons[0].src = "images/icons/evac.png";
+                }
+                if (serviceIcons[1]) {
+                    serviceIcons[1].src = "images/icons/pid.png";
+                }
+                if (serviceIcons[2]) {
+                    serviceIcons[2].src = "images/icons/trainings.png";
+                }
+            }
+        }
+    });
+
+} else {
+
+    if (!themeToggle) {
+        console.warn("Theme toggle element (#themeToggle) not found on this page.");
+    }
+
+    if (!themeStylesheet) {
+        console.warn("Theme stylesheet element (#themeStylesheet) not found on this page.");
+    }
+}
+
+
+// ==========================================
+// OPTIONAL ELEMENT WARNINGS
+// ==========================================
+
+// Logo
+if (!logo) {
+    console.warn("Logo image (.logo img) not found on this page.");
+}
+
+// Service icons
+if (serviceIcons.length === 0) {
+    console.warn("Service icons (.iconsContainer .fade-item img) not found on this page.");
+} else if (serviceIcons.length < 3) {
+    console.warn("Some service icons are missing. Expected 3, found " + serviceIcons.length + ".");
+}

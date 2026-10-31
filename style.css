@@ -111,7 +111,7 @@ align-items: center;
 .hero-container {
     /* 1. Add the background image with a dark overlay gradient for readability */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url('images/coverphoto1.png');
+                      url('randomImages/fire.jpg');
     
     /* 2. Properly size and position the image */
     background-size: cover;       /* Scales the image to completely fill the container */
@@ -296,7 +296,7 @@ align-items: center;
         margin: 20px;
         text-decoration: none;
         display: inline-block;
-        max-width: 100px;
+        max-width: 280px;
         border: 2px solid white;
         border-radius: 10px;
         transition: all 1s;
