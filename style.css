@@ -655,8 +655,8 @@ font-family: 'linksfont';
 }
 /* focusfont */
 .fx-focus {
-  font: 500 26px/1.1 "JetBrains Mono", monospace;
-  letter-spacing: .06em;
+  font: 400 20px/1.1 "JetBrains Mono", monospace;
+  letter-spacing: .04em;
   color: var(--ink);
   padding-bottom: 10px;
   }
