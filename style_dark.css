@@ -673,4 +673,11 @@ font-family: 'linksfont';
 .clients-section h1 {
   font-size: 1.8rem;
 }
+/* focusfont */
+.fx-focus {
+  font: 500 26px/1.1 "JetBrains Mono", monospace;
+  letter-spacing: .06em;
+  color: var(--ink);
+  padding-bottom: 10px;
+  }
 }
