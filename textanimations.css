@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'linksfont';
+    src: url('fonts/alk-sanet.ttf');      
+  }
+
+/* Colour tokens — override to re-skin the effect:
+   --ink    main text colour (defaults to currentColor)
+   --ink-2  primary accent   --ink-3  secondary accent */
+:root { --ink: currentColor; --ink-2: #4f4fff; --ink-3: #4FF8FF; }
+
+/* 121 Aura — a grainy aurora gradient with a soft bloom drifting through the letters */
+.fx-aura {
+    font-family: 'linksfont';
+  position: relative;
+  /* font: 700 44px/1.1 "JetBrains Mono", monospace; */
+  letter-spacing: .04em;
+  white-space: pre;
+  color: transparent;
+  background:
+    radial-gradient(56% 120% at 18% 24%, var(--ink-2) 0 16%, transparent 60%),
+    radial-gradient(52% 118% at 82% 28%, var(--ink-3) 0 14%, transparent 58%),
+    radial-gradient(60% 128% at 52% 94%, #ffd76a 0 10%, transparent 56%),
+    linear-gradient(112deg, #6d4bff, var(--ink-2) 34%, var(--ink-3) 68%, #6d4bff);
+  background-size: 210% 210%, 200% 200%, 230% 230%, 260% 100%;
+  background-position: 0% 20%, 100% 10%, 40% 100%, 0 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter:
+    drop-shadow(0 0 14px color-mix(in srgb, var(--ink-2) 45%, transparent))
+    drop-shadow(0 0 34px color-mix(in srgb, var(--ink-3) 32%, transparent));
+  animation: fx-aura-drift 8s ease-in-out infinite alternate;
+}
+.fx-aura::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  mix-blend-mode: overlay;
+  opacity: .45;
+  pointer-events: none;
+  animation: fx-aura-grain .9s steps(1) infinite;
+}
+.fx-aura::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  background: radial-gradient(40% 130% at 30% 35%, #ffffff 0 6%, transparent 58%);
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  mix-blend-mode: screen;
+  opacity: .5;
+  pointer-events: none;
+  animation: fx-aura-sheen 8s ease-in-out infinite alternate;
+}
+@keyframes fx-aura-drift {
+  0%   { background-position: 0% 20%, 100% 10%, 40% 100%, 0 50%; }
+  100% { background-position: 100% 80%, 0% 70%, 70% 0%, 100% 50%; }
+}
+@keyframes fx-aura-sheen {
+  0%   { background-position: -60% 0; }
+  100% { background-position: 160% 0; }
+}
+@keyframes fx-aura-grain {
+  0%   { background-position: 0 0; }
+  20%  { background-position: -24px 12px; }
+  40%  { background-position: 18px -20px; }
+  60%  { background-position: -14px -8px; }
+  80%  { background-position: 22px 16px; }
+  100% { background-position: 0 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fx-aura,
+  .fx-aura::before,
+  .fx-aura::after { animation: none; }
+}
