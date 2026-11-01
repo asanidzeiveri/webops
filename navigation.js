@@ -36,8 +36,10 @@ const logo = document.querySelector(".logo img");
 const serviceIcons = document.querySelectorAll(
     ".iconsContainer .fade-item img"
 );
-
-
+//select large logos evac, pid, train
+const largelogo = document.querySelector(".largelogospace img");
+const largelogo_pid = document.querySelector(".largelogospace_pid img");
+const largelogo_train = document.querySelector(".largelogospace_train img");
 // Check theme toggle elements
 if (themeToggle && themeStylesheet) {
 
@@ -52,6 +54,18 @@ if (themeToggle && themeStylesheet) {
             // Change logo to white version
             if (logo) {
                 logo.src = "images/ddLogo_White.png";
+            }
+            // change largelogo _evac to white version
+            if (largelogo) {
+                largelogo.src = "images/icons/evac_white.png";
+            }
+            // change largelogo _pid to white version
+            if (largelogo_pid) {
+                largelogo_pid.src = "images/icons/pid_white.png";
+            }
+            // change largelogo _trainings to white version
+            if (largelogo_train) {
+                largelogo_train.src = "images/icons/trainings_White.png";
             }
 
             // Change service icons to white versions
@@ -77,7 +91,18 @@ if (themeToggle && themeStylesheet) {
             if (logo) {
                 logo.src = "images/ddLogo.png";
             }
-
+     // restore to original
+     if (largelogo) {
+        largelogo.src = "images/icons/evac.png";
+    }
+       // restore largelogo _pid to white version
+       if (largelogo_pid) {
+        largelogo_pid.src = "images/icons/pid.png";
+    }
+      // restore largelogo _trainings to white version
+      if (largelogo_train) {
+        largelogo_train.src = "images/icons/trainings.png";
+    }
             // Restore original service icons
             if (serviceIcons.length > 0) {
                 if (serviceIcons[0]) {
@@ -113,7 +138,16 @@ if (themeToggle && themeStylesheet) {
 if (!logo) {
     console.warn("Logo image (.logo img) not found on this page.");
 }
-
+// largelogo
+if (!largelogo) {
+    console.warn("Large Logo image (.logo img) not found on this page.");
+}
+if (!largelogo_pid) {
+    console.warn("Large Logo P&ID image (.logo img) not found on this page.");
+}
+if (!largelogo_train) {
+    console.warn("Large Logo Trainings image (.logo img) not found on this page.");
+}
 // Service icons
 if (serviceIcons.length === 0) {
     console.warn("Service icons (.iconsContainer .fade-item img) not found on this page.");

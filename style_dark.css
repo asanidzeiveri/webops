@@ -183,8 +183,8 @@ nav{
         gap: 20px;           /* Adds a clean space between the image and the text */
         padding-top: 8px;
         background-color: #000000;
-        border-radius: 8px;
-        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+        /* border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3); */
         color: white;
       }
       
@@ -207,7 +207,26 @@ nav{
         padding-bottom: 8px;
         font-family: 'square';
       }
-
+      .media-text ul {
+        font-family: 'square';
+        list-style-type: square;
+        padding-left: 40px;
+      }
+      .media-text ol {
+        font-family: 'square';
+        list-style-type: decimal;
+        padding-left: 40px;
+      }
+      .media-text .media-text-image { 
+        display: flex;
+        justify-content: center; 
+        height: 300px;   
+        padding: 30px; 
+   
+      }
+      .media-text .media-text-image img{
+        box-shadow: 5px 5px 10px rgb(255, 255, 255);
+      }
       /* animated icons */
       .iconsContainer{
         display: flex;
@@ -323,27 +342,37 @@ nav{
       padding-left: 40px;
       padding-bottom: 20px;
     }
-    /* large logo space */
-    .largelogospace{
-      display: flex;
-      justify-content: center;
-      background-color: black;
-    }
-    .largelogospace img{
-      height: 200px;
-    }
-        /* LARGE LOGO OOOOOOOOOOOOOOO */
-        .largelogospace{
+
+  /* LARGE LOGO EVAC*/
+  .largelogospace{
           display: flex;
           justify-content: center;
-          background-image: url('images/logolargeWHITE.png');
           background-position: center;
-          /* background-size: 400px; */
           height: 300px;
           background-repeat: no-repeat;
           background-color: black;
-          
         }
+
+          /* LARGE LOGO EVAC*/
+          /* Large Loo Space P&ID */
+  .largelogospace_pid{
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+  .largelogospace_train{
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+
+
     /* FOOTER {}{}{}{}{}{}{}{}{}{{}}{}{}{}{}{}*/
     .footer{
       background-color: black;
@@ -647,6 +676,21 @@ font-family: 'linksfont';
     margin: 25px auto 10px;
     padding: 12px;
 }
+/* media-text elements regulated */
+.largelogospace_train{
+  height: 100px;
+}
+.largelogospace{
+  height: 100px;
+}
+.largelogospace_pid{
+  height: 100px;
+}
+.media-text .media-text-image { 
+  height: 150px;
+  padding: 20px;
+}
+
 .footer{
   flex-direction: column;
   /* text-align: center; */

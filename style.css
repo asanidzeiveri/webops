@@ -182,8 +182,8 @@ align-items: center;
         gap: 20px;           /* Adds a clean space between the image and the text */
         padding-top: 8px;
         background-color: #f9f9f9;
-        border-radius: 8px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 8, 0.3);
+        /* border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 8, 0.3); */
       }
       
       .media-image {
@@ -205,7 +205,25 @@ align-items: center;
         padding-bottom: 8px;
         font-family: 'square';
       }
-
+      .media-text ul {
+        font-family: 'square';
+        list-style-type: square;
+        padding-left: 40px;
+      }
+      .media-text ol {
+        font-family: 'square';
+        list-style-type: decimal;
+        padding-left: 40px;
+      }
+      .media-text .media-text-image { 
+        display: flex;
+        justify-content: center; 
+        height: 300px;   
+        padding: 30px;      
+      }
+  .media-text .media-text-image img{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
       /* animated icons */
       .iconsContainer{
         display: flex;
@@ -317,16 +335,30 @@ align-items: center;
       padding-left: 40px;
       padding-bottom: 20px;
     }
-    /* LARGE LOGO OOOOOOOOOOOOOOO */
+
+
+    /* LARGE LOGO EVAC*/
     .largelogospace{
       display: flex;
       justify-content: center;
-      background-image: url('images/logolarge.png');
       background-position: center;
-      /* background-size: 400px; */
       height: 300px;
       background-repeat: no-repeat;
-      
+    }
+    /* Large Logo Space for P&ID */
+    .largelogospace_pid{
+      display: flex;
+      justify-content: center;
+      background-position: center;
+      height: 300px;
+      background-repeat: no-repeat;
+    }
+    .largelogospace_train{
+      display: flex;
+      justify-content: center;
+      background-position: center;
+      height: 300px;
+      background-repeat: no-repeat;
     }
    
     /* FOOTER {}{}{}{}{}{}{}{}{}{{}}{}{}{}{}{}*/
@@ -626,6 +658,21 @@ font-family: 'linksfont';
     width: 160px;
     margin: 25px auto 10px;
     padding: 12px;
+}
+
+/* media-text items regulated */
+.largelogospace_train{
+  height: 100px;
+}
+.largelogospace{
+  height: 100px;
+}
+.largelogospace_pid{
+  height: 100px;
+}
+.media-text .media-text-image { 
+  height: 150px;
+  padding: 20px;
 }
 .footer{
   flex-direction: column;
