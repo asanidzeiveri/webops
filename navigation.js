@@ -57,11 +57,11 @@ if (themeToggle && themeStylesheet) {
             }
             // change largelogo _evac to white version
             if (largelogo) {
-                largelogo.src = "images/icons/evac_white.png";
+                largelogo.src = "images/icons/evac_White.png";
             }
             // change largelogo _pid to white version
             if (largelogo_pid) {
-                largelogo_pid.src = "images/icons/pid_white.png";
+                largelogo_pid.src = "images/icons/pid_White.png";
             }
             // change largelogo _trainings to white version
             if (largelogo_train) {
