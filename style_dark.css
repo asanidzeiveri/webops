@@ -255,6 +255,7 @@ color: white;
 flex: 0 0 60%;
 padding: 15px;
 box-sizing: border-box;
+line-height: 1.2;
 }
 .about_text p{
   font-family: 'square';
@@ -356,6 +357,7 @@ box-sizing: border-box;
         color: rgb(255, 255, 255);
         flex-basis: 70%;
         font-size: 16px;
+        line-height: 1.2;
     }
     
     #info .textitemleft h1{
