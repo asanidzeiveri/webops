@@ -104,3 +104,54 @@ width: 80px;
   background-color: black;
   color: white;
  }
+
+ 
+/* ABOUT US DIVS STYLING */
+ .aboutus{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+
+ }
+.about_image{
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_text{
+  flex: 0 0 60%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+ .about_image img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 10px 10px 0px rgb(27, 7, 109);
+
+ }
+
+ @media screen and (max-width: 768px) {
+
+  .aboutus {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .about_image,
+  .about_text {
+      flex: 0 0 100%;
+      width: 100%;
+  }
+
+  .about_image img {
+      max-width: 100%;
+  }
+
+}

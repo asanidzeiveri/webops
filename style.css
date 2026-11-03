@@ -197,8 +197,11 @@ align-items: center;
       
       .media-text {
         flex: 1;  
-        font-family: 'square';           /* Tells the text container to take up all remaining width */
+        font-family: 'square';          
         margin: 8px;
+      }
+      .media-text p{
+        padding-bottom: 10px;
       }
       .media-text h2{
         font-weight: bold;
@@ -209,11 +212,13 @@ align-items: center;
         font-family: 'square';
         list-style-type: square;
         padding-left: 40px;
+        padding-bottom: 10px;
       }
       .media-text ol {
         font-family: 'square';
         list-style-type: decimal;
         padding-left: 40px;
+        padding-bottom: 10px;
       }
       .media-text .media-text-image { 
         display: flex;
@@ -224,6 +229,52 @@ align-items: center;
   .media-text .media-text-image img{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   }
+  /* ABOUT US DIVS STYLING */
+ .aboutus{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+.about_image{
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_text{
+flex: 0 0 60%;
+padding: 15px;
+box-sizing: border-box;
+}
+.about_text p{
+  font-family: 'square';
+  padding-bottom: 10px;
+}
+.about_text ul {
+  font-family: 'square';
+  list-style-type: square;
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+.about_text h1{
+  font-family: 'linksfont';
+  padding-bottom: 12px;
+  font-size: 20px;
+}
+
+.about_image img{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 10px 10px 0px rgb(27, 7, 109);
+
+}
       /* animated icons */
       .iconsContainer{
         display: flex;
@@ -743,7 +794,6 @@ font-family: 'linksfont';
   flex-direction: column;
   gap: 20px;
 }
-
 .client-item {
   width: 100%;
   max-width: 350px;
@@ -769,4 +819,18 @@ font-family: 'linksfont';
   .services_card{
     width: 400px;
   }
+  .aboutus {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about_image,
+.about_text {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.about_image img {
+    max-width: 100%;
+}
 }

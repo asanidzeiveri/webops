@@ -156,7 +156,6 @@ if (themeToggle && themeStylesheet) {
     }
 }
 
-
 // ==========================================
 // OPTIONAL ELEMENT WARNINGS
 // ==========================================

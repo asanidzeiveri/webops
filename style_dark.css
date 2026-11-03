@@ -204,6 +204,9 @@ nav{
         font-family: 'square';           /* Tells the text container to take up all remaining width */
         margin: 8px;
       }
+      .media-text p{
+        padding-bottom: 10px;
+      }
       .media-text h2{
         font-weight: bold;
         padding-bottom: 8px;
@@ -213,11 +216,13 @@ nav{
         font-family: 'square';
         list-style-type: square;
         padding-left: 40px;
+        padding-bottom: 10px;
       }
       .media-text ol {
         font-family: 'square';
         list-style-type: decimal;
         padding-left: 40px;
+        padding-bottom: 10px;
       }
       .media-text .media-text-image { 
         display: flex;
@@ -229,6 +234,51 @@ nav{
       .media-text .media-text-image img{
         box-shadow: 5px 5px 10px rgb(255, 255, 255);
       }
+      /* ABOUT US DIVS STYLING */
+ .aboutus{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+color: white;
+}
+.about_image{
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_text{
+flex: 0 0 60%;
+padding: 15px;
+box-sizing: border-box;
+}
+.about_text p{
+  font-family: 'square';
+  padding-bottom: 10px;
+}
+.about_text ul {
+  font-family: 'square';
+  list-style-type: square;
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+.about_text h1{
+  font-family: 'linksfont';
+  padding-bottom: 12px;
+  font-size: 20px;
+}
+.about_image img{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 10px 10px 0px rgb(27, 7, 109);
+
+}
       /* animated icons */
       .iconsContainer{
         display: flex;
@@ -793,4 +843,18 @@ font-family: 'linksfont';
   .services_card{
     width: 400px;
   }
+  .aboutus {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about_image,
+.about_text {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.about_image img {
+    max-width: 100%;
+}
 }
