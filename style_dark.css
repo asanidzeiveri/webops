@@ -11,7 +11,9 @@
     font-family: 'square';
     src: url('fonts/bpg_extrasquare_2009.ttf');
   }
-
+body{
+  background-color: black;
+}
   /* NAVIGATION BAR STYLING */
 nav{
     position: sticky;
@@ -549,6 +551,65 @@ font-family: 'linksfont';
 
 /*END OF FOOTER STYLE FOOTER {}{}{}{}{}{}{}{}{}{{}}{}{}{}{}{}*/
 
+.services_container{
+	/*width: 90%;*/
+	margin: auto;
+  background-color: black;
+  color: white;
+  font-family: 'square';
+}
+.section_heading {
+	font-size: 30px;
+	text-align: center;
+	margin-top: 30px;
+  background-color: black;
+}
+.service_cards{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+
+}
+.services_card{
+	width: 600px;
+	text-align: center;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 10px;
+	padding: 20px;
+	margin: 20px;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+.services_card:hover{
+	transform: translateY(-20px);
+	background-color:  rgb(54, 54, 54);
+  border: 1px solid  rgb(189, 189, 189);
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+.services_card h2{
+	font-size: 20px;
+	margin-bottom: 8px;
+}
+.services_card h3{
+	font-size: 15px;
+	margin-bottom: 8px;
+}
+.services_card p{
+	font-size: 15px;
+	margin-bottom: 8px;
+}
+.services_card img{
+	/*width: 100px;*/
+	height: 100px;
+}
+.services_card ul{
+	list-style-type: square;
+	margin-left: 30px;
+	margin-bottom: 8px;
+}
+.services_card_text{
+	text-align: left;
+}
       /* responsiveness ------------------------------------------------------------------------------------------
       ----------------------------------------------------------------------------------------------------------[]*/
 @media (max-width: 768px){
@@ -723,5 +784,9 @@ font-family: 'linksfont';
   letter-spacing: .04em;
   color: var(--ink);
   padding-bottom: 10px;
+  }
+  .service_cards{
+    flex-direction: column;
+    align-items: center;
   }
 }

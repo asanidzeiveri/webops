@@ -40,6 +40,10 @@ const serviceIcons = document.querySelectorAll(
 const largelogo = document.querySelector(".largelogospace img");
 const largelogo_pid = document.querySelector(".largelogospace_pid img");
 const largelogo_train = document.querySelector(".largelogospace_train img");
+const servicesCard_evac = document.querySelector(".servicesIcon_evacuation img");
+const servicesCard_pid = document.querySelector(".servicesIcon_pid img");
+const servicesCard_train = document.querySelector(".servicesIcon_train img");
+
 // Check theme toggle elements
 if (themeToggle && themeStylesheet) {
 
@@ -67,7 +71,18 @@ if (themeToggle && themeStylesheet) {
             if (largelogo_train) {
                 largelogo_train.src = "images/icons/trainings_White.png";
             }
-
+            //CHANGE SERVICES EVAC ICON
+            if (servicesCard_evac){
+                servicesCard_evac.src = "images/icons/evac_White.png";
+            }
+             //CHANGE SERVICES P&ID ICON
+             if (servicesCard_pid){
+                servicesCard_pid.src = "images/icons/pid_White.png";
+            }
+            //CHANGE SERVICES TRAININGS ICON
+            if(servicesCard_train){
+                servicesCard_train.src = "images/icons/trainings_White.png";
+            }
             // Change service icons to white versions
             if (serviceIcons.length > 0) {
                 if (serviceIcons[0]) {
@@ -102,6 +117,18 @@ if (themeToggle && themeStylesheet) {
       // restore largelogo _trainings to white version
       if (largelogo_train) {
         largelogo_train.src = "images/icons/trainings.png";
+    }
+      //Restore SERVICES EVAC ICON
+      if (servicesCard_evac){
+        servicesCard_evac.src = "images/icons/evac.png";
+    }
+    //Restore Services P&ID ICON
+    if (servicesCard_pid){
+        servicesCard_pid.src = "images/icons/pid.png";
+    }
+      //restore SERVICES TRAININGS ICON
+      if(servicesCard_train){
+        servicesCard_train.src = "images/icons/trainings.png";
     }
             // Restore original service icons
             if (serviceIcons.length > 0) {
@@ -147,6 +174,16 @@ if (!largelogo_pid) {
 }
 if (!largelogo_train) {
     console.warn("Large Logo Trainings image (.logo img) not found on this page.");
+}
+// General SERVICE PAGE ICONS
+if (!servicesCard_evac){
+    console.warn("No Service Page Evacuation Icon");
+}
+if (!servicesCard_pid){
+    console.warn("No Service Page P&ID Icon");
+}
+if (!servicesCard_train){
+    console.warn("No Service Page Trainings Icon");
 }
 // Service icons
 if (serviceIcons.length === 0) {
