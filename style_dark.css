@@ -724,7 +724,7 @@ font-family: 'linksfont';
   /* max-width: 1200px; */
   margin: 0 auto;
   padding: 8px 24px;
-  background-color: #000000;
+  background-color: #2d2d2d;
   /* Grid: 2 cards per row on desktop */
 /*  display: grid;
   grid-template-columns: repeat(2, 1fr);*/
@@ -761,7 +761,7 @@ font-family: 'linksfont';
 
 /* Hover effect: soft shadow fades in and the card lifts slightly */
 .card_header:hover {
-  box-shadow: 0 20px 50px rgba(157, 157, 157, 0.56);
+  box-shadow: 0 20px 50px rgba(1, 41, 77, 0.700);
   transform: translateY(-6px);
 }
 
@@ -771,7 +771,7 @@ font-family: 'linksfont';
   /* max-width: 1200px; */
   margin: 0 auto;
   padding: 48px 24px;
-  background-color: #000000;
+  background-color: #2d2d2d;
   /* Grid: 2 cards per row on desktop */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -792,7 +792,7 @@ font-family: 'linksfont';
 
 /* Hover effect: soft shadow fades in and the card lifts slightly */
 .card:hover {
-  box-shadow: 0 20px 50px rgba(157, 157, 157, 0.56);
+  box-shadow: 0 20px 50px rgba(1, 42, 77, 0.700);
   transform: translateY(-6px);
 }
 
