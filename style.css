@@ -123,7 +123,7 @@ nav{
     
     /* 3. Give the container dimensions */
     width: 100%;
-    min-height: 460px;             /* Adjust the height as needed */
+    min-height: 450px;             /* Adjust the height as needed */
     
     /* 4. Center the inner text vertically and horizontally */
     display: flex;
