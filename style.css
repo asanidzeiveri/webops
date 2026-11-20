@@ -29,7 +29,7 @@ nav{
     align-items: center;
 }
 .logo img{
-    width: 80px;
+    width: 60px;
 }
 .logo h3{
     margin-left: 10px;
@@ -63,6 +63,9 @@ nav{
     font-family: 'linksfont';
     /* border-radius: 50px; */
     transition: all ease-in-out 0.3s;
+}
+.nav-links .en{
+  font-family: 'monserat';
 }
 .nav-links a:hover{
     background-color: #006fc9;
@@ -99,7 +102,7 @@ nav{
     border: none;
     padding: 8px;
     margin:8px;
-align-items: center;
+    align-items: center;
    }
    .nav-links .lightdark:hover{
     background-color: black;
@@ -120,7 +123,7 @@ align-items: center;
     
     /* 3. Give the container dimensions */
     width: 100%;
-    min-height: 432px;             /* Adjust the height as needed */
+    min-height: 460px;             /* Adjust the height as needed */
     
     /* 4. Center the inner text vertically and horizontally */
     display: flex;
@@ -801,7 +804,56 @@ font-family: 'linksfont';
   margin: 8px;
 }
   /* END OF PORTFOLIO ALGORITHM */
-
+/*ChangeLanguage Algorithm*/
+.changelanguage{
+	position: relative;
+}
+.languagestatement{
+	display: flex;
+	width: auto;
+	align-items: center;
+	text-align: center;
+	/* border: 1px solid rgb(0, 0, 0); */
+	padding: 6px 8px;
+  margin-left: 16px;
+	transition: 0.5s ease;
+  cursor: pointer;
+}
+.languagestatement img{
+	height: 30px;
+}
+.languagestatement:hover{
+	background-color: blue;
+}
+.languagechoosen{
+	display: flex;
+	position: absolute;
+  margin-left: 16px;
+  width: auto;
+	/* border: 1px solid black; */
+	justify-content: center;
+	align-items: center;
+  text-align: center;
+	transition: 0.5s ease;
+  background-color: white;
+	opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  top: 100%;
+  left: 0;
+  z-index: 1001;
+}
+.languagechoosen img{
+	height: 30px;
+}
+.a_language{
+	text-decoration: none;
+	color: black;
+}
+.changelanguage:hover .languagechoosen{
+	opacity: 1;
+	visibility: visible;
+}
       /* responsiveness ------------------------------------------------------------------------------------------
       ----------------------------------------------------------------------------------------------------------[]*/
 @media (max-width: 768px){
@@ -826,6 +878,9 @@ font-family: 'linksfont';
     }
     .nav-links li{
         flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .nav-links a{
         text-align: center;
@@ -839,11 +894,38 @@ font-family: 'linksfont';
         margin-left: 0;
         border: none;
         border-radius: 0;
-        margin-bottom: 30px;
     }
     .nav-links .nav-cta-button:hover{
         background-color: #006fc9;
+        border: none;
     }
+    .nav-links .lightdark{
+       display: flex;
+      margin: 0;
+        padding: 20px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 16px;
+     }
+     .nav-links .changelanguage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+  }
+  .languagestatement{
+    display: none;
+  }
+  .languagechoosen{
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    margin-bottom: 8px;
+    margin-left: 0px;
+  }
+  /*End of Navigation*/
     .media-container{
         flex-direction: column;
     }

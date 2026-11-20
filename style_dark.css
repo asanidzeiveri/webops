@@ -31,7 +31,7 @@ nav{
     align-items: center;
 }
 .logo img{
-    width: 80px;
+    width: 60px;
 }
 .logo h3{
     margin-left: 10px;
@@ -65,6 +65,9 @@ nav{
     font-family: 'linksfont';
     /* border-radius: 50px; */
     transition: all ease-in-out 0.3s;
+}
+.nav-links .en{
+  font-family: 'monserat';
 }
 .nav-links a:hover{
     background-color: #006fc9;
@@ -121,7 +124,7 @@ nav{
     
     /* 3. Give the container dimensions */
     width: 100%;
-    min-height: 432px;             /* Adjust the height as needed */
+    min-height: 460px;             /* Adjust the height as needed */
     
     /* 4. Center the inner text vertically and horizontally */
     display: flex;
@@ -229,7 +232,6 @@ nav{
         justify-content: center; 
         height: 300px;   
         padding: 30px; 
-   
       }
       .media-text .media-text-image img{
         box-shadow: 5px 5px 10px rgb(255, 255, 255);
@@ -825,48 +827,131 @@ font-family: 'linksfont';
   background-color: #000000; /* shown if the image is missing */
   margin: 8px;
 }
+/*end of portfolio items*/
+/*ChangeLanguage Algorithm*/
+.changelanguage{
+	position: relative;
+}
+.languagestatement{
+	display: flex;
+	width: auto;
+	align-items: center;
+  text-align: center;
+	/* border: 1px solid #1692ff; */
+	padding: 6px 8px;
+	transition: 0.5s ease;
+  cursor: pointer;
+  color: white;
+  margin-left: 16px;
+}
+.languagestatement img{
+	height: 30px;
+}
+.languagestatement:hover{
+	background-color: blue;
+}
+
+.languagechoosen{
+	display: flex;
+	position: absolute;
+  width: auto;
+  margin-left: 16px;
+	/* border: 1px solid #1692ff; */
+	justify-content: center;
+	align-items: center;
+  text-align: center;
+	transition: 0.5s ease;
+  background-color: rgb(0, 0, 0);
+	opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  top: 100%;
+  left: 0;
+  z-index: 1001;
+}
+.languagechoosen img{
+	height: 30px;
+}
+.a_language{
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+.changelanguage:hover .languagechoosen{
+	opacity: 1;
+	visibility: visible;
+}
       /* responsiveness ------------------------------------------------------------------------------------------
       ----------------------------------------------------------------------------------------------------------[]*/
 @media (max-width: 768px){
-    nav{
-        flex-wrap: wrap;
-    }
-    .hamburger{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .logo{
-        height: 60px;
-    }
-    .nav-links {
-        display: none;
-        flex-basis: 100%;
-        flex-wrap: wrap;
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    .nav-links li{
-        flex-basis: 100%;
-    }
-    .nav-links a{
-        text-align: center;
-        font-size: 24px;
-    }
-    .nav-links a:hover{
-        background-color: #006fc9;
-    }
-    .nav-links .nav-cta-button{
-        padding: 20px 16px;
-        margin-left: 0;
-        border: none;
-        border-radius: 0;
-        margin-bottom: 30px;
-    }
-    .nav-links .nav-cta-button:hover{
-        background-color: #006fc9;
-    }
+  nav{
+    flex-wrap: wrap;
+}
+.hamburger{
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo{
+    height: 60px;
+}
+.nav-links {
+    display: none;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.nav-links.active {
+    display: flex;
+}
+.nav-links li{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links a{
+    text-align: center;
+    font-size: 24px;
+}
+.nav-links a:hover{
+    background-color: #006fc9;
+}
+.nav-links .nav-cta-button{
+    padding: 20px 16px;
+    margin-left: 0;
+    border: none;
+    border-radius: 0;
+}
+.nav-links .nav-cta-button:hover{
+    background-color: #006fc9;
+    border: none;
+}
+.nav-links .lightdark{
+   display: flex;
+  margin: 0;
+    padding: 20px 16px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+padding: 20px 16px;
+ }
+ .nav-links .changelanguage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.languagestatement{
+display: none;
+}
+.languagechoosen{
+opacity: 1;
+visibility: visible;
+position: relative;
+margin-bottom: 8px;
+margin-left: 0px;
+}
+/*End of Navigation*/
     .media-container{
         flex-direction: column;
     }
