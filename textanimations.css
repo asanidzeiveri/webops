@@ -6,7 +6,7 @@
 /* Colour tokens — override to re-skin the effect:
    --ink    main text colour (defaults to currentColor)
    --ink-2  primary accent   --ink-3  secondary accent */
-:root { --ink: currentColor; --ink-2: #4f4fff; --ink-3: #4FF8FF; }
+:root { --ink: currentColor; --ink-2: #292980; --ink-3: #2d898c; }
 
 /* 121 Aura — a grainy aurora gradient with a soft bloom drifting through the letters */
 .fx-aura {
@@ -19,8 +19,8 @@
   background:
     radial-gradient(56% 120% at 18% 24%, var(--ink-2) 0 16%, transparent 60%),
     radial-gradient(52% 118% at 82% 28%, var(--ink-3) 0 14%, transparent 58%),
-    radial-gradient(60% 128% at 52% 94%, #ffd76a 0 10%, transparent 56%),
-    linear-gradient(112deg, #6d4bff, var(--ink-2) 34%, var(--ink-3) 68%, #6d4bff);
+    radial-gradient(60% 128% at 52% 94%, #5d4f27 0 10%, transparent 56%),
+    linear-gradient(112deg, #3d2a91, var(--ink-2) 34%, var(--ink-3) 68%, #3d2a91);
   background-size: 210% 210%, 200% 200%, 230% 230%, 260% 100%;
   background-position: 0% 20%, 100% 10%, 40% 100%, 0 50%;
   -webkit-background-clip: text;
